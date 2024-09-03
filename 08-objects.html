@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+
+  <body>
+    <script>
+      /*
+      const product = {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(product);
+      console.log(product.name); //dot notation
+      console.log(product.price);
+
+      product.name = 'cotton socks'; //updating a value in the object
+      console.log(product);
+
+      product.newProperty = true; // creating a new field in the object
+      console.log(product);
+
+      delete product.newProperty; // deleting a property in the object. 
+      console.log(product);
+      */
+
+      /*
+      const product2 ={
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating: { //nested object
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1(){ //function inside object
+          console.log('Function inside object');
+        }
+      };
+      console.log(product2['name']); //bracket notation
+      //bracket notaion is used when dot notation doesn't work. Example of error:
+      //product2.delivery-time 
+      
+      console.log(product2['delivery-time']); //with dot would not work. 
+
+      console.log(product2.rating.stars); // nested object
+
+      product2.fun(); 
+
+      //built-in functions
+
+      console.log(JSON.stringify(product2)); // converting js to JSON using JSON.stringify.
+      
+      // It converts to string format. 
+      console.log(typeof JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2); //converting to json
+      console.log(JSON.parse(jsonString)); // converting json to js
+      console.log(typeof JSON.parse(jsonString)); 
+       */
+
+      console.log('hello'.toUpperCase());
+      console.log('hello'.length);
+
+      const object1 ={
+        message: 'hello'
+      };
+      const object2 = object1; // It will point to the same reference of obj1.
+
+      object1.message = 'Good job!';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = { // another place in memory was created. It is not equal to obj1
+        message: 'Good job!'
+      }
+
+      console.log(object3 === object1);
+      console.log(object2 === object1);
+
+      const object4 = {
+        message: 'Good job!',
+        price: 799
+      }
+
+      // const message(variable name) = object4.message(property name); the code bellow does the same thing
+      const {message, price} = object4; // if the variable name and the property name are the same
+      /// It is known by destructuring
+
+      console.log(message); // easier way to take properties out of an object
+      console.log(price); 
+
+     
+      //SHORTHAND PROPERTY
+      const object5 = { //5:21:50  https://www.youtube.com/watch?v=EerdGm-ehJQ&t=121s
+        //message: message // message property : message variable ( comes from the messsage above.
+        message // if the property and the variable name are the same. Does the same thing as the variable above message: message
+      };
+
+      console.log(object5);
+
+      const object6 = {
+        message,
+        // method: function function1() {
+        //   console.log('method');
+        // } 
+        method(){ // Known as shorthand method. It does the same thing as the code above
+          console.log('method');
+        }
+      
+      }
+
+      console.log(object6);
+      object6.method();
+
+    </script>
+  </body>
+</html>

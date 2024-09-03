@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+      let computer = Math.floor(Math.random() * 3);
+      let result = ''
+      let dict = {0: 'rock', 1: 'paper', 2: 'scissors'};
+      if(computer ===2){ 
+        result = 'You win';
+      } else if(computer ===1){ //paper
+        result = 'You lose'
+      } else{
+        result = 'Tie'
+      }
+      alert(`You picked rock. Computer picked ${dict[computer]}. ${result}.`);
+    ">Rock</button>
+
+    <button onclick="
+      computer = Math.floor(Math.random() * 3); // 0 to 2
+      result = ''
+      dict = {0: 'rock', 1: 'paper', 2: 'scissors'};
+      if(computer ===0){
+        result = 'You win';
+      } else if(computer ===2){ //scissors
+        result = 'You lose'
+      } else{
+        result = 'Tie'
+      }
+      alert(`You picked paper. Computer picked ${dict[computer]}. ${result}.`);
+    ">Paper</button>
+
+    <button onclick="
+      computer = Math.floor(Math.random() * 3);
+      result = ''
+      dict = {0: 'rock', 1: 'paper', 2: 'scissors'};
+      if(computer ===1){
+        result = 'You win';
+      } else if(computer ===0){ //rock
+        result = 'You lose'
+      } else{
+        result = 'Tie'
+      }
+      alert(`You picked scissors. Computer picked ${dict[computer]}. ${result}.`);
+    ">Scissors</button>
+    <p>
+      <br><br><br>
+      <a href="">Click here</a> to see the final project. 
+    </p>
+    
+    <script>
+    
+    </script>
+  </body>
+</html>

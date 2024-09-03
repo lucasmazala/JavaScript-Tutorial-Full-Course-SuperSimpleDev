@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Updating right away</title>
+  </head>
+
+  <body>
+    <input placeholder= "Type something" class= "js-input-name"
+    onkeyup="changeName();
+    ">
+
+    <p class="js-name"></p>
+
+    <script>
+        function changeName(){
+            name = document.querySelector('.js-input-name').value;
+            document.querySelector('.js-name').innerHTML = name;
+        }
+    </script>
+  </body>
+</html>

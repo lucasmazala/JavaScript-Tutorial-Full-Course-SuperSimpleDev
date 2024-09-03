@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 9a to 9c </title>
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="js-btn2">9b</button>
+    <br> <br> <br>
+
+    <button onclick="
+    option1('btn1');
+    ">heads</button>
+    
+    <button onclick="
+    option1('btn2');
+    ">tails</button>
+
+    <p class="js-option"></p>
+  </body>
+
+  <script>
+    console.log(document.querySelector('button'));
+
+    document.querySelector('.js-btn2').innerHTML = '9b done!';
+   
+    function option1(btn){
+      if(btn==='btn1'){
+        document.querySelector('.js-option').innerHTML= 'You chose: heads';
+      } else if(btn==='btn2'){
+        document.querySelector('.js-option').innerHTML= 'You chose: tails';
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+
+  <body>
+    <button>Hello</button> 
+    <button class="js-button">Second button</button> <!--class is giving a name to the button so that we can specify the button in the querySelector -->
+    <!---good practice is use 'js-' + name to tell that the class is being used in JS-->
+
+    <script>
+      console.log(document.querySelector('button')); // It lets us get any element from the page and put it inside js
+
+      document.querySelector('button') 
+        .innerHTML = 'Changed'; // here we change the content inside the button
+
+      const buttonElement = document.querySelector('.js-button'); // the '.' is telling that is a class. Like css
+      console.log(buttonElement);
+
+
+      /*
+      console.log(document.title);
+      document.title = 'Changed';
+
+      // the DOM combines js and html together
+      console.log(document.body); //document allows to have html into js code
+      console.log(typeof document.body); 
+
+
+      console.log(document.body.innerHTML); // shows the html in the body
+      document.body.innerHTML = '<button>Good job!</button>';//innerHTML controls all html into the body. Here it changes all the content for the button created.
+      */
+
+      /*
+      document.body.innerHTML = 'hello';
+      document.title = 'Good job!' */
+
+      
+    </script>
+  </body>
+</html>

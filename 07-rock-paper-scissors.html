@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+      playGame('rock'); 
+    ">Rock</button>
+
+    <button onclick="
+      playGame('paper'); 
+    ">Paper</button>
+
+    <button onclick="
+      playGame('scissors'); 
+    ">Scissors</button>
+    
+    <p>
+      <br><br><br>
+      <a href="">Click here</a> to see the final project. 
+    </p>
+    
+    <script>
+
+      function playGame(playerMove){
+        const computer = pickComputerMove();
+        let result = ''
+        
+        if(playerMove === 'rock'){
+          if(computer ==='scissors'){ 
+            result = 'You win';
+          } else if(computer ==='paper'){ 
+            result = 'You lose'
+          } else{
+            result = 'Tie'
+          }
+
+        }else if(playerMove === 'paper'){
+          console.log(computer)
+          if(computer ==='rock'){
+            result = 'You win';
+          } else if(computer ==='scissors'){ 
+            result = 'You lose'
+          } else{
+            result = 'Tie'
+          }
+
+        }else if(playerMove === 'scissors'){
+          if(computer ==='paper'){
+            result = 'You win';
+          } else if(computer ==='rock'){ 
+            result = 'You lose'
+          } else{
+            result = 'Tie'
+          }
+        }
+        console.log(computer)
+        alert(`You picked ${playerMove}. Computer picked ${computer}. ${result}.`);
+      }
+      
+      function pickComputerMove(){
+        const dict = {0: 'rock', 1: 'paper', 2: 'scissors'};
+        computer = Math.floor(Math.random() * 3);
+        return dict[computer]
+      }
+    </script>
+  </body>
+</html>
