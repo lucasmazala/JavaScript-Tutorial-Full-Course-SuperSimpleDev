@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function countWords(words){
+        wordsObj={};
+
+        for(let i = 0; i < words.length; i++){
+            if(wordsObj[words[i]]===undefined){
+              wordsObj[words[i]]= 1;
+            } else{
+              wordsObj[words[i]] += 1;
+          }                  
+        }         
+        return wordsObj;
+      }
+
+      console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+      
+    </script>
+  </body>
+</html>
